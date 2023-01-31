@@ -4,5 +4,5 @@
  * @returns {Set}
  */
 export default function setFromArray(array) {
-	return new Set(array);
+  return new Set(array);
 }
