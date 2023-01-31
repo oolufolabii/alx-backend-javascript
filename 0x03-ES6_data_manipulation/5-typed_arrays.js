@@ -1,5 +1,5 @@
 /**
- * Creates a buffer array with a given position set to a given value.
+ * Creates a buffer array with a given position set to a given value
  * @returns {DataView}
  */
 export default function createInt8TypedArray(length, position, value) {
