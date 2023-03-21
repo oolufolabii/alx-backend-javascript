@@ -3,9 +3,9 @@ const express = require('express');
 
 const app = express();
 const PORT = 1245;
-const DATA_FILE = process.argv.length > 2 ? process.argv[2] : '';
+const DB_FILE = process.argv.length > 2 ? process.argv[2] : '';
 
-const studentsCount = (argPath) => new Promise((resolve, reject) => {
+const countStudents = (argPath) => new Promise((resolve, reject) => {
 	if (!argPath) {
 		reject(new Error('Cannot load the database'));
 	}
@@ -57,7 +57,7 @@ app.get('/', (_, res) => {
 app.get('/students', (_, res) => {
 	const presponse = ['This is the list of our students'];
 
-	studentsCount(DATA_FILE)
+	countStudents(DB_FILE)
 		.then((report) => {
 			presponse.push(report);
 			const responseText = presponse.join('\n');
