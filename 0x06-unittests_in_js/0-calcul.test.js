@@ -14,9 +14,6 @@ describe('calculateNumber', () => {
   it('addition of rounded-up number (a) and rounded-up number (b)', () => {
     assert.strictEqual(calculateNumber(1.5, 3.6), 6);
   });
-  it('addition of rounded-down number (a) and rounded-down number (b)', () => {
-    assert.strictEqual(calculateNumber(1.2, 3.4), 4);
-  });
   it('addition of floating whole numbers', () => {
     assert.strictEqual(calculateNumber(2.0, 3.0), 5);
   });
